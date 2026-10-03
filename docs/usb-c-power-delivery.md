@@ -2,7 +2,7 @@
 
 ## Overview
 
-USB-C Power Delivery is the driveway of power distribution infrastructure. At desks, conference tables, and phone booths, PoE-powered USB-C ports charge laptops and devices directly with up to approximately 45 watts, completely eliminating wall warts, floor boxes, and power strips.
+USB-C Power Delivery (USB PD) lets compatible devices negotiate charging power over a USB-C connection. In offices, PoE-powered USB-C ports can provide convenient device charging at desks, conference tables, and phone booths while reducing reliance on individual chargers and power strips. Available output depends on the PoE source and adapter; it is not necessarily 45W at every port.
 
 ## Technical Specifications
 
@@ -10,7 +10,7 @@ USB-C Power Delivery is the driveway of power distribution infrastructure. At de
 - **Example PoE-fed output:** Up to ~45W per port, subject to the input PoE budget, converter efficiency, and product rating
 - **Connector Type:** USB-C (USB Type-C)
 - **Integration:** PoE-powered delivery
-- **Data Transfer:** Simultaneous power and data capability
+- **Data Transfer:** USB-C can carry data while supplying power when the port and adapter support data; some charging ports are power-only
 
 ### USB Power Delivery Standard
 
@@ -234,24 +234,9 @@ These examples describe design approaches, not measured customer deployments or 
 - UL/safety certifications
 - Regional compliance (CE, FCC, etc.)
 
-## Future Developments
+## Product Selection and Standards
 
-### Higher Power Delivery
-- 100W+ standards in development
-- Support for larger systems
-- Desktop computing possibilities
-
-### Enhanced Capabilities
-- Improved efficiency standards
-- Better thermal management
-- Advanced power monitoring
-- AI-optimized power distribution
-
-### Ecosystem Evolution
-- Increased device adoption
-- Standardized cables and adapters
-- Integration with building management systems
-- Environmental monitoring integration
+USB PD capability and PoE input class are separate limits: the USB-C port can only provide the output supported by both the converter and its available PoE input. Compare the adapter's published input requirements, per-port output profiles, multiport power-sharing behavior, efficiency, and certifications with the connected switch and intended devices. Check the current USB-IF specification and product documentation during procurement rather than inferring capabilities from the USB-C connector alone.
 
 ## Real-World Implementation Example
 
@@ -270,6 +255,7 @@ PoE Cat6A Cable → Desk Mount USB-C Port
 
 ## References
 
-- USB Power Delivery Specification (USB-IF)
-- USB Implementers Forum
+- [USB Power Delivery specifications and resources (USB-IF)](https://www.usb.org/usb-charger-pd)
+- IEEE 802.3 Ethernet standards (Power over Ethernet)
+- Adapter and switch product datasheets and installation manuals
 - Cisco Live On Demand - CENGRN 2110
